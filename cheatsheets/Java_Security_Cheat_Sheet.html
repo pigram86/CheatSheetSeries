@@ -97,7 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -370,7 +370,9 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -567,6 +569,26 @@
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -827,6 +849,26 @@
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1937,6 +1979,26 @@
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2277,6 +2339,26 @@
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2362,6 +2444,26 @@
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -3047,7 +3149,7 @@
 <h3 id="general-advices-to-prevent-injection">General advices to prevent Injection<a class="headerlink" href="#general-advices-to-prevent-injection" title="Permanent link">&para;</a></h3>
 <p>The following point can be applied, in a general way, to prevent <em>Injection</em> issue:</p>
 <ol>
-<li>Apply <strong>Input Validation</strong> (using "allow list" approach) combined with <strong>Output Sanitizing+Escaping</strong> on user input/output.</li>
+<li>Apply <strong>Input Validation</strong> (using allowlist approach) combined with <strong>Output Sanitizing+Escaping</strong> on user input/output.</li>
 <li>If you need to interact with system, try to use API features provided by your technology stack (Java / .Net / PHP...) instead of building command.</li>
 </ol>
 <p>Additional advices are provided on this <a href="Input_Validation_Cheat_Sheet.html">cheatsheet</a>.</p>
@@ -3227,11 +3329,11 @@
 <h4 id="symptom_4">Symptom<a class="headerlink" href="#symptom_4" title="Permanent link">&para;</a></h4>
 <p>Injection of this type occur when the application uses untrusted user input to build an HTTP response and sent it to browser.</p>
 <h4 id="how-to-prevent_4">How to prevent<a class="headerlink" href="#how-to-prevent_4" title="Permanent link">&para;</a></h4>
-<p>Either apply strict input validation ("allow list" approach) or use output sanitizing+escaping if input validation is not possible (combine both every time is possible).</p>
+<p>Either apply strict input validation (allowlist approach) or use output sanitizing+escaping if input validation is not possible (combine both every time is possible).</p>
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="cm">/*</span>
 <span class="cm">INPUT WAY: Receive data from user</span>
-<span class="cm">Here it&#39;s recommended to use strict input validation using &quot;allow list&quot; approach.</span>
+<span class="cm">Here it&#39;s recommended to use strict input validation using allowlist approach.</span>
 <span class="cm">In fact, you ensure that only allowed characters are part of the input received.</span>
 <span class="cm">*/</span>
 
@@ -3459,14 +3561,14 @@ other log viewing/analysis tools that don&#39;t expect the log data to be pre-HT
 <h3 id="general-cryptography-guidance">General cryptography guidance<a class="headerlink" href="#general-cryptography-guidance" title="Permanent link">&para;</a></h3>
 <ul>
 <li><strong>Never, ever write your own cryptographic functions.</strong></li>
-<li>Wherever possible, try and avoid writing any cryptographic code at all. Instead try and either use pre-existing secret management solutions or the secret management solution provided by your cloud provider. For more information, see the <a href="/Secrets_Management_Cheat_Sheet">OWASP Secrets Management Cheat Sheet</a>.</li>
+<li>Wherever possible, try and avoid writing any cryptographic code at all. Instead try and either use pre-existing secret management solutions or the secret management solution provided by your cloud provider. For more information, see the <a href="Secrets_Management_Cheat_Sheet.html">OWASP Secrets Management Cheat Sheet</a>.</li>
 <li>If you cannot use a pre-existing secret management solution, try and use a trusted and well known implementation library rather than using the libraries built into JCA/JCE as it is far too easy to make cryptographic errors with them.</li>
 <li>Make sure your application or protocol can easily support a future change of cryptographic algorithms.</li>
 <li>Use your package manager wherever possible to keep all of your packages up to date. Watch the updates on your development setup, and plan updates to your applications accordingly.</li>
 <li>We will show examples below based on Google Tink, which is a library created by cryptography experts for using cryptography safely (in the sense of minimizing common mistakes made when using standard cryptography libraries).</li>
 </ul>
 <h3 id="encryption-for-storage">Encryption for storage<a class="headerlink" href="#encryption-for-storage" title="Permanent link">&para;</a></h3>
-<p>Follow the algorithm guidance in the <a href="https://cheatsheetseries.owasp.org/cheatsheets/Cryptographic_Storage_Cheat_Sheet.html#algorithms">OWASP Cryptographic Storage Cheat Sheet</a>.</p>
+<p>Follow the algorithm guidance in the <a href="Cryptographic_Storage_Cheat_Sheet.html#algorithms">OWASP Cryptographic Storage Cheat Sheet</a>.</p>
 <h4 id="symmetric-example-using-google-tink">Symmetric example using Google Tink<a class="headerlink" href="#symmetric-example-using-google-tink" title="Permanent link">&para;</a></h4>
 <p>Google Tink has documentation on performing common tasks.</p>
 <p>For example, this page (from Google's website) shows <a href="https://developers.google.com/tink/encrypt-data">how to perform simple symmetric encryption</a>.</p>
@@ -3683,7 +3785,7 @@ other log viewing/analysis tools that don&#39;t expect the log data to be pre-HT
 
 <span class="w">        </span><span class="n">KeysetHandle</span><span class="w"> </span><span class="n">bobPublicKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="na">getPublicKey</span><span class="p">();</span>
 
-<span class="w">        </span><span class="c1">// This keypair generation shoud be reperformed every so often in order to</span>
+<span class="w">        </span><span class="c1">// This keypair generation should be reperformed every so often in order to</span>
 <span class="w">        </span><span class="c1">// obtain a new shared secret to avoid a long lived shared secret.</span>
 
 <span class="w">        </span><span class="c1">// Alice encrypts a message to send to Bob</span>
@@ -3797,7 +3899,7 @@ other log viewing/analysis tools that don&#39;t expect the log data to be pre-HT
 <span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="n">bob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ECDHSimple</span><span class="p">();</span>
 <span class="w">        </span><span class="n">Key</span><span class="w"> </span><span class="n">bobPublicKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bob</span><span class="p">.</span><span class="na">getPublicKey</span><span class="p">();</span>
 
-<span class="w">        </span><span class="c1">// This keypair generation shoud be reperformed every so often in order to </span>
+<span class="w">        </span><span class="c1">// This keypair generation should be reperformed every so often in order to</span>
 <span class="w">        </span><span class="c1">// obtain a new shared secret to avoid a long lived shared secret.</span>
 
 <span class="w">        </span><span class="c1">// Alice encrypts a message to send to Bob</span>
@@ -3871,7 +3973,7 @@ other log viewing/analysis tools that don&#39;t expect the log data to be pre-HT
 
 <span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AesKeyNonce</span><span class="w"> </span><span class="nf">generateAESParams</span><span class="p">(</span><span class="n">Key</span><span class="w"> </span><span class="n">partnerPublicKey</span><span class="p">,</span><span class="w"> </span><span class="kt">byte</span><span class="o">[]</span><span class="w"> </span><span class="n">nonce</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
 
-<span class="w">        </span><span class="c1">// Derive the secret based on this side&#39;s private key and the other side&#39;s public key </span>
+<span class="w">        </span><span class="c1">// Derive the secret based on this side&#39;s private key and the other side&#39;s public key</span>
 <span class="w">        </span><span class="n">KeyAgreement</span><span class="w"> </span><span class="n">keyAgreement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KeyAgreement</span><span class="p">.</span><span class="na">getInstance</span><span class="p">(</span><span class="s">&quot;ECDH&quot;</span><span class="p">);</span>
 <span class="w">        </span><span class="n">keyAgreement</span><span class="p">.</span><span class="na">init</span><span class="p">(</span><span class="n">keyPair</span><span class="p">.</span><span class="na">getPrivate</span><span class="p">());</span>
 <span class="w">        </span><span class="n">keyAgreement</span><span class="p">.</span><span class="na">doPhase</span><span class="p">(</span><span class="n">partnerPublicKey</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
@@ -3925,7 +4027,7 @@ other log viewing/analysis tools that don&#39;t expect the log data to be pre-HT
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -3945,7 +4047,7 @@ other log viewing/analysis tools that don&#39;t expect the log data to be pre-HT
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>

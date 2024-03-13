@@ -97,7 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -370,7 +370,9 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -567,6 +569,26 @@
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -827,6 +849,26 @@
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1927,6 +1969,26 @@
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2267,6 +2329,26 @@
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2352,6 +2434,26 @@
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -3048,7 +3150,7 @@
 <h5 id="how-to-test-for-the-issue">How to test for the issue<a class="headerlink" href="#how-to-test-for-the-issue" title="Permanent link">&para;</a></h5>
 <h6 id="during-code-review">During code review<a class="headerlink" href="#during-code-review" title="Permanent link">&para;</a></h6>
 <p>please check for any queries to the database are not done via prepared statements.</p>
-<p>If dynamic statements are being made please check if the data is sanitized before used as par of the statement.</p>
+<p>If dynamic statements are being made please check if the data is sanitized before used as part of the statement.</p>
 <p>Auditors should always look for uses of sp_execute, execute or exec within SQL Server stored procedures. Similar audit guidelines are necessary for similar functions for other vendors.</p>
 <h6 id="automated-exploitation">Automated Exploitation<a class="headerlink" href="#automated-exploitation" title="Permanent link">&para;</a></h6>
 <p>Most of the situation and techniques below here can be performed in a automated way using some tools. In this article the tester can find information how to perform an automated auditing using <a href="https://wiki.owasp.org/index.php/Automated_Audit_using_SQLMap">SQLMap</a></p>
@@ -3182,8 +3284,8 @@
 <li><strong>Input validation</strong> - the values for commands and the relevant arguments should be both validated. There are different degrees of validation for the actual command and its arguments:<ul>
 <li>When it comes to the <strong>commands</strong> used, these must be validated against a list of allowed commands.</li>
 <li>In regards to the <strong>arguments</strong> used for these commands, they should be validated using the following options:<ul>
-<li>Positive or "allow list" input validation - where are the arguments allowed explicitly defined</li>
-<li>Allow-list Regular Expression - where is explicitly defined a list of good characters allowed and the maximum length of the string. Ensure that metacharacters like <code>&amp; | ; $ &gt; &lt; \</code> \ !` and white-spaces are not part of the Regular Expression. For example, the following regular expression only allows lowercase letters and numbers, and does not contain metacharacters. The length is also being limited to 3-10 characters:</li>
+<li>Positive or allowlist input validation - where are the arguments allowed explicitly defined</li>
+<li>Allow-list Regular Expression - where is explicitly defined a list of good characters allowed and the maximum length of the string. Ensure that metacharacters like <code>&amp; | ; $ &gt; &lt; \</code> \ !` and whitespaces are not part of the Regular Expression. For example, the following regular expression only allows lowercase letters and numbers, and does not contain metacharacters. The length is also being limited to 3-10 characters:</li>
 </ul>
 </li>
 </ul>
@@ -3206,7 +3308,7 @@
 <p>Web applications often communicate with network daemons (like SMTP, IMAP, FTP) where user input becomes part of the communication stream. Here it is possible to inject command sequences to abuse an established session.</p>
 <h2 id="injection-prevention-rules">Injection Prevention Rules<a class="headerlink" href="#injection-prevention-rules" title="Permanent link">&para;</a></h2>
 <h3 id="rule-1-perform-proper-input-validation">Rule #1 (Perform proper input validation)<a class="headerlink" href="#rule-1-perform-proper-input-validation" title="Permanent link">&para;</a></h3>
-<p>Perform proper input validation. Positive or "allow list" input validation with appropriate canonicalization is also recommended, but <strong>is not a complete defense</strong> as many applications require special characters in their input.</p>
+<p>Perform proper input validation. Positive or allowlist input validation with appropriate canonicalization is also recommended, but <strong>is not a complete defense</strong> as many applications require special characters in their input.</p>
 <h3 id="rule-2-use-a-safe-api">Rule #2 (Use a safe API)<a class="headerlink" href="#rule-2-use-a-safe-api" title="Permanent link">&para;</a></h3>
 <p>The preferred option is to use a safe API which avoids the use of the interpreter entirely or provides a parameterized interface. Be careful of APIs, such as stored procedures, that are parameterized, but can still introduce injection under the hood.</p>
 <h3 id="rule-3-contextually-escape-user-data">Rule #3 (Contextually escape user data)<a class="headerlink" href="#rule-3-contextually-escape-user-data" title="Permanent link">&para;</a></h3>
@@ -3237,7 +3339,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -3257,7 +3359,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>

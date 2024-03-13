@@ -97,7 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -370,7 +370,9 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -567,6 +569,26 @@
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -827,6 +849,26 @@
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1482,6 +1524,26 @@
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -1897,6 +1959,26 @@
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -1982,6 +2064,26 @@
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -2301,16 +2403,16 @@
 <li>The client application is often not a web application and does not allow inspection of the activating link or even relevant code.</li>
 </ul>
 </li>
-<li>The parameters are none standard making it hard to determine what is just part of the URL or a constant header and what is a parameter worth <a href="https://owasp.org/www-community/Fuzzing">fuzzing</a>.</li>
+<li>The parameters are non-standard making it hard to determine what is just part of the URL or a constant header and what is a parameter worth <a href="https://owasp.org/www-community/Fuzzing">fuzzing</a>.</li>
 <li>As a machine interface the number of parameters used can be very large, for example a JSON structure may include dozens of parameters. <a href="https://owasp.org/www-community/Fuzzing">fuzzing</a> each one significantly lengthen the time required for testing.</li>
 <li>Custom authentication mechanisms require reverse engineering and make popular tools not useful as they cannot track a login session.</li>
 </ul>
 <h2 id="how-to-pentest-a-restful-web-service">How to pentest a RESTful web service<a class="headerlink" href="#how-to-pentest-a-restful-web-service" title="Permanent link">&para;</a></h2>
-<p>Determine the attack surface through documentation - RESTful pen testing might be better off if some level of white box testing is allowed and you can get information about the service.</p>
+<p>Determine the attack surface through documentation - RESTful pen testing might be better off if some level of clear-box testing is allowed and you can get information about the service.</p>
 <p>This information will ensure fuller coverage of the attack surface. Such information to look for:</p>
 <ul>
 <li>Formal service description - While for other types of web services such as SOAP a formal description, usually in WSDL is often available, this is seldom the case for REST. That said, either WSDL 2.0 or WADL can describe REST and are sometimes used.</li>
-<li>A developer guide for using the service may be less detailed but will commonly be found, and might even be considered <em>black box</em>.</li>
+<li>A developer guide for using the service may be less detailed but will commonly be found, and might even be considered <em>opaque-box</em> testing.</li>
 <li>Application source or configuration - in many frameworks, including dotNet ,the REST service definition might be easily obtained from configuration files rather than from code.</li>
 </ul>
 <p>Collect full requests using a <a href="https://www.zaproxy.org/">proxy</a> - while always an important pen testing step, this is more important for REST based applications as the application UI may not give clues on the actual attack surface.</p>
@@ -2371,7 +2473,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2391,7 +2493,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>

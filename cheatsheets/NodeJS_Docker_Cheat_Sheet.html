@@ -97,7 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -370,7 +370,9 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -567,6 +569,26 @@
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -827,6 +849,26 @@
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1632,6 +1674,26 @@
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -1972,6 +2034,26 @@
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2057,6 +2139,26 @@
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -2486,12 +2588,12 @@ CMD &quot;npm&quot; &quot;start&quot;
 <p><strong><code>RUN npm install</code></strong></p>
 <p>Enforce deterministic builds with <code>npm ci</code>. This prevents surprises in a continuous integration (CI) flow because it halts if any deviations from the lockfile are made.</p>
 <p>In the case of building a Docker image for production we want to ensure that we only install production dependencies in a deterministic way, and this brings us to the following recommendation for the best practice for installing npm dependencies in a container image:</p>
-<p><strong><code>RUN npm ci --only=production</code></strong></p>
+<p><strong><code>RUN npm ci --omit=dev</code></strong></p>
 <p>The updated Dockerfile contents in this stage are as follows:</p>
 <div class="highlight"><pre><span></span><code>FROM node:lts-alpine@sha256:b2da3316acdc2bec442190a1fe10dc094e7ba4121d029cb32075ff59bb27390a
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 CMD &quot;npm&quot; &quot;start&quot;
 </code></pre></div>
 <h2 id="3-optimize-nodejs-tooling-for-production">3) Optimize Node.js tooling for production<a class="headerlink" href="#3-optimize-nodejs-tooling-for-production" title="Permanent link">&para;</a></h2>
@@ -2510,7 +2612,7 @@ CMD &quot;npm&quot; &quot;start&quot;
 ENV NODE_ENV production
 WORKDIR /usr/src/app
 COPY . /usr/src/app
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 CMD &quot;npm&quot; &quot;start&quot;
 </code></pre></div>
 <h2 id="4-dont-run-containers-as-root">4) Don’t run containers as root<a class="headerlink" href="#4-dont-run-containers-as-root" title="Permanent link">&para;</a></h2>
@@ -2527,7 +2629,7 @@ CMD &quot;npm&quot; &quot;start&quot;
 ENV NODE_ENV production
 WORKDIR /usr/src/app
 COPY --chown=node:node . /usr/src/app
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 USER node
 CMD &quot;npm&quot; &quot;start&quot;
 </code></pre></div>
@@ -2580,7 +2682,7 @@ RUN apk add dumb-init
 ENV NODE_ENV production
 WORKDIR /usr/src/app
 COPY --chown=node:node . .
-RUN npm ci --only=production
+RUN npm ci --omit=dev
 USER node
 CMD [&quot;dumb-init&quot;, &quot;node&quot;, &quot;server.js&quot;]
 </code></pre></div>
@@ -2646,27 +2748,27 @@ ENV NODE_ENV production
 ENV NPM_TOKEN 1234
 WORKDIR /usr/src/app
 COPY --chown=node:node . .
-#RUN npm ci --only=production
+#RUN npm ci --omit=dev
 RUN echo &quot;//registry.npmjs.org/:_authToken=$NPM_TOKEN&quot; &gt; .npmrc &amp;&amp; \
-   npm ci --only=production
+   npm ci --omit=dev
 USER node
 CMD [&quot;dumb-init&quot;, &quot;node&quot;, &quot;server.js&quot;]
 </code></pre></div>
 <p>Doing this, however, leaves the <code>.npmrc</code> file with the secret npm token inside the Docker image. You could attempt to improve it by deleting it afterwards, like this:</p>
 <div class="highlight"><pre><span></span><code>RUN echo &quot;//registry.npmjs.org/:_authToken=$NPM_TOKEN&quot; &gt; .npmrc &amp;&amp; \
-   npm ci --only=production
+   npm ci --omit=dev
 RUN rm -rf .npmrc
 </code></pre></div>
 <p>However, now the <code>.npmrc</code> file is available in a different layer of the Docker image. If this Docker image is public, or someone is able to access it somehow, then your token is compromised. A better improvement would be as follows:</p>
 <div class="highlight"><pre><span></span><code>RUN echo &quot;//registry.npmjs.org/:_authToken=$NPM_TOKEN&quot; &gt; .npmrc &amp;&amp; \
-   npm ci --only=production; \
+   npm ci --omit=dev; \
    rm -rf .npmrc
 </code></pre></div>
 <p>The problem now is that the Dockerfile itself needs to be treated as a secret asset, because it contains the secret npm token inside it.</p>
 <p>Luckily, Docker supports a way to pass arguments into the build process:</p>
 <div class="highlight"><pre><span></span><code>ARG NPM_TOKEN
 RUN echo &quot;//registry.npmjs.org/:_authToken=$NPM_TOKEN&quot; &gt; .npmrc &amp;&amp; \
-   npm ci --only=production; \
+   npm ci --omit=dev; \
    rm -rf .npmrc
 </code></pre></div>
 <p>And then we build it as follows:</p>
@@ -2698,7 +2800,7 @@ ARG NPM_TOKEN
 WORKDIR /usr/src/app
 COPY package*.json /usr/src/app/
 RUN echo &quot;//registry.npmjs.org/:_authToken=$NPM_TOKEN&quot; &gt; .npmrc &amp;&amp; \
-   npm ci --only=production &amp;&amp; \
+   npm ci --omit=dev &amp;&amp; \
    rm -f .npmrc
 
 # --------------&gt; The production image
@@ -2776,7 +2878,7 @@ Dockerfile
 FROM node:latest AS build
 WORKDIR /usr/src/app
 COPY package*.json /usr/src/app/
-RUN --mount=type=secret,mode=0644,id=npmrc,target=/usr/src/app/.npmrc npm ci --only=production
+RUN --mount=type=secret,mode=0644,id=npmrc,target=/usr/src/app/.npmrc npm ci --omit=dev
 
 # --------------&gt; The production image
 FROM node:lts-alpine
@@ -2815,7 +2917,7 @@ CMD [&quot;dumb-init&quot;, &quot;node&quot;, &quot;server.js&quot;]
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2835,7 +2937,7 @@ CMD [&quot;dumb-init&quot;, &quot;node&quot;, &quot;server.js&quot;]
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>

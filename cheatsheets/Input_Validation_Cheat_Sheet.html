@@ -97,7 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -370,7 +370,9 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -567,6 +569,26 @@
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -827,6 +849,26 @@
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1157,8 +1199,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#allow-list-vs-block-list" class="md-nav__link">
-    Allow list vs block list
+  <a href="#allowlist-vs-denylist" class="md-nav__link">
+    Allowlist vs Denylist
   </a>
   
 </li>
@@ -1700,6 +1742,26 @@
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2040,6 +2102,26 @@
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2125,6 +2207,26 @@
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -2397,8 +2499,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#allow-list-vs-block-list" class="md-nav__link">
-    Allow list vs block list
+  <a href="#allowlist-vs-denylist" class="md-nav__link">
+    Allowlist vs Denylist
   </a>
   
 </li>
@@ -2585,10 +2687,10 @@
 <li>Array of allowed values for small sets of string parameters (e.g. days of week).</li>
 <li>Regular expressions for any other structured data covering the whole input string <code>(^...$)</code> and <strong>not</strong> using "any character" wildcard (such as <code>.</code> or <code>\S</code>)</li>
 </ul>
-<h3 id="allow-list-vs-block-list">Allow list vs block list<a class="headerlink" href="#allow-list-vs-block-list" title="Permanent link">&para;</a></h3>
-<p>It is a common mistake to use block list validation in order to try to detect possibly dangerous characters and patterns like the apostrophe <code>'</code> character, the string <code>1=1</code>, or the <code>&lt;script&gt;</code> tag, but this is a massively flawed approach as it is trivial for an attacker to bypass such filters.</p>
+<h3 id="allowlist-vs-denylist">Allowlist vs Denylist<a class="headerlink" href="#allowlist-vs-denylist" title="Permanent link">&para;</a></h3>
+<p>It is a common mistake to use denylist validation in order to try to detect possibly dangerous characters and patterns like the apostrophe <code>'</code> character, the string <code>1=1</code>, or the <code>&lt;script&gt;</code> tag, but this is a massively flawed approach as it is trivial for an attacker to bypass such filters.</p>
 <p>Plus, such filters frequently prevent authorized input, like <code>O'Brian</code>, where the <code>'</code> character is fully legitimate. For more information on XSS filter evasion please see <a href="https://owasp.org/www-community/xss-filter-evasion-cheatsheet">this wiki page</a>.</p>
-<p>Allow list validation is appropriate for all input fields provided by the user. Allow list validation involves defining exactly what IS authorized, and by definition, everything else is not authorized.</p>
+<p>Allowlist validation is appropriate for all input fields provided by the user. allowlist validation involves defining exactly what IS authorized, and by definition, everything else is not authorized.</p>
 <p>If it's well structured data, like dates, social security numbers, zip codes, email addresses, etc. then the developer should be able to define a very strong validation pattern, usually based on regular expressions, for validating such input.</p>
 <p>If the input field comes from a fixed set of options, like a drop down list or radio buttons, then the input needs to match exactly one of the values offered to the user in the first place.</p>
 <h3 id="validating-free-form-unicode-text">Validating free-form Unicode text<a class="headerlink" href="#validating-free-form-unicode-text" title="Permanent link">&para;</a></h3>
@@ -2634,7 +2736,7 @@ TX|UT|VT|VI|VA|WA|WV|WI|WY)$
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="w"> </span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
 <span class="w">      </span><span class="n">String</span><span class="w"> </span><span class="n">zipCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;zip&quot;</span><span class="w"> </span><span class="p">);</span>
-<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">zipPattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="w"> </span><span class="n">zipCode</span><span class="w"> </span><span class="p">).</span><span class="na">matches</span><span class="p">()</span><span class="w">  </span><span class="p">{</span>
+<span class="w">      </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">zipPattern</span><span class="p">.</span><span class="na">matcher</span><span class="p">(</span><span class="w"> </span><span class="n">zipCode</span><span class="w"> </span><span class="p">).</span><span class="na">matches</span><span class="p">()</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">          </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">YourValidationException</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;Improper zipcode format.&quot;</span><span class="w"> </span><span class="p">);</span>
 <span class="w">      </span><span class="p">}</span>
 <span class="w">      </span><span class="c1">// do what you want here, after its been validated ..</span>
@@ -2643,7 +2745,7 @@ TX|UT|VT|VI|VA|WA|WV|WI|WY)$
 <span class="w">  </span><span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Some Allow list validators have also been predefined in various open source packages that you can leverage. For example:</p>
+<p>Some Allowlist validators have also been predefined in various open source packages that you can leverage. For example:</p>
 <ul>
 <li><a href="http://commons.apache.org/proper/commons-validator/">Apache Commons Validator</a></li>
 </ul>
@@ -2662,7 +2764,7 @@ TX|UT|VT|VI|VA|WA|WV|WI|WY)$
 <ul>
 <li>Use input validation to ensure the uploaded filename uses an expected extension type.</li>
 <li>Ensure the uploaded file is not larger than a defined maximum file size.</li>
-<li>If the website supports ZIP file upload, do validation check before unzip the file. The check includes the target path, level of compress, estimated unzip size.</li>
+<li>If the website supports ZIP file upload, do a validation check before unzipping the file. The check includes the target path, level of compression, estimated unzip size.</li>
 </ul>
 <h3 id="upload-storage">Upload Storage<a class="headerlink" href="#upload-storage" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2764,7 +2866,7 @@ TX|UT|VT|VI|VA|WA|WV|WI|WY)$
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2784,7 +2886,7 @@ TX|UT|VT|VI|VA|WA|WV|WI|WY)$
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>

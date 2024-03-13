@@ -101,7 +101,7 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -141,7 +141,7 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -230,7 +230,7 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -374,7 +374,9 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -571,6 +573,26 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -831,6 +853,26 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1486,6 +1528,26 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2025,6 +2087,26 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -2110,6 +2192,26 @@ redirect_from: "/cheatsheets/Ruby_on_Rails_Cheatsheet.html"
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -2693,7 +2795,7 @@ gem<span class="w"> </span><span class="s1">&#39;omniauth&#39;</span>
 <p>The above request would redirect the user to <code>http://www.example.com/checkout</code>. The security concern associated with this functionality is leveraging an organization's trusted brand to phish users and trick them into visiting a malicious site, in our example, <code>badhacker.com</code>.</p>
 <p>Example:</p>
 <p><code>http://www.example.com/redirect?url=http://badhacker.com</code></p>
-<p>The most basic, but restrictive protection is to use the <code>:only_path</code> option. Setting this to true will essentially strip out any host information. However, the <code>:only_path</code> option must be part of the first argument. If the first argument is not a hash table, then there is no way to pass in this option. In the absence of a custom helper or allow list, this is one approach that can work:</p>
+<p>The most basic, but restrictive protection is to use the <code>:only_path</code> option. Setting this to true will essentially strip out any host information. However, the <code>:only_path</code> option must be part of the first argument. If the first argument is not a hash table, then there is no way to pass in this option. In the absence of a custom helper or allowlist, this is one approach that can work:</p>
 <div class="highlight"><pre><span></span><code><span class="k">begin</span>
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="no">URI</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">params</span><span class="o">[</span><span class="ss">:url</span><span class="o">]</span><span class="p">)</span><span class="o">.</span><span class="n">path</span>
 <span class="w">    </span><span class="n">redirect_to</span><span class="w"> </span><span class="n">path</span>
@@ -2711,7 +2813,7 @@ gem<span class="w"> </span><span class="s1">&#39;omniauth&#39;</span>
 <span class="n">validation_routine</span><span class="p">(</span><span class="n">host</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">host</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">validation_routine</span><span class="p">(</span><span class="n">host</span><span class="p">)</span>
 <span class="w">  </span><span class="c1"># Validation routine where we use  \A and \z as anchors *not* ^ and $</span>
-<span class="w">  </span><span class="c1"># you could also check the host value against an allow list</span>
+<span class="w">  </span><span class="c1"># you could also check the host value against an allowlist</span>
 <span class="k">end</span>
 </code></pre></div>
 <p>Also blind redirecting to user input parameter can lead to XSS.</p>
@@ -2745,7 +2847,7 @@ gem<span class="w"> </span><span class="s1">&#39;omniauth&#39;</span>
 <p>The receiving site should list only those domains allowed to make such requests as well as set the <code>Access-Control-Allow-Origin</code> header in both the response to the <code>OPTIONS</code> request and <code>POST</code> request. This is because the OPTIONS request is sent first, in order to determine if the remote or receiving site allows the requesting domain. Next, a second request, a <code>POST</code> request, is sent. Once again, the header must be set in order for the transaction to be shown as successful.</p>
 <p>When standard HTTP constructs are used:</p>
 <p><em>The request is sent and the browser, upon receiving a response, inspects the response headers in order to determine if the response can and should be processed.</em></p>
-<p>Allow list in Rails:</p>
+<p>Allowlist in Rails:</p>
 <p><strong>Gemfile:</strong></p>
 <div class="highlight"><pre><span></span><code>gem<span class="w"> </span><span class="s1">&#39;rack-cors&#39;</span>,<span class="w"> </span>:require<span class="w"> </span><span class="o">=</span>&gt;<span class="w"> </span><span class="s1">&#39;rack/cors&#39;</span>
 </code></pre></div>
@@ -2844,7 +2946,7 @@ gem<span class="w"> </span><span class="s1">&#39;omniauth&#39;</span>
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2864,7 +2966,7 @@ gem<span class="w"> </span><span class="s1">&#39;omniauth&#39;</span>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>

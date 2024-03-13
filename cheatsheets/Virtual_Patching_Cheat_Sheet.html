@@ -97,7 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-header__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -137,7 +137,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
     
       <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"/></svg>
@@ -226,7 +226,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../index.html" title="OWASP Cheat Sheet Series" class="md-nav__button md-logo" aria-label="OWASP Cheat Sheet Series" data-md-component="logo">
       
-  <img src="../assets/OWASP_Logo_Transp.png" alt="logo">
+  <img src="../assets/OWASP_Logo.svg" alt="logo">
 
     </a>
     OWASP Cheat Sheet Series
@@ -370,7 +370,9 @@
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
@@ -567,6 +569,26 @@
   
   <span class="md-ellipsis">
     C-Based Toolchain Hardening
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CI_CD_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CI CD Security
   </span>
   
 
@@ -827,6 +849,26 @@
   
   <span class="md-ellipsis">
     Django REST Framework
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Django_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Django Security
   </span>
   
 
@@ -1482,6 +1524,26 @@
   
   
     <li class="md-nav__item">
+      <a href="OAuth2_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    OAuth2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="OS_Command_Injection_Defense_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -1822,6 +1884,26 @@
   
   
     <li class="md-nav__item">
+      <a href="Symfony_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Symfony
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
       <a href="TLS_Cipher_String_Cheat_Sheet.html" class="md-nav__link">
         
   
@@ -1907,6 +1989,26 @@
   
   <span class="md-ellipsis">
     Transport Layer Protection
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="Transport_Layer_Security_Cheat_Sheet.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Transport Layer Security
   </span>
   
 
@@ -2698,8 +2800,8 @@ reqID Parameter prone to SQL Injection.
 <h3 id="proactive-identification">Proactive Identification<a class="headerlink" href="#proactive-identification" title="Permanent link">&para;</a></h3>
 <p>This occurs when an organization takes it upon themselves to assess their web security posture and conducts the following tasks:</p>
 <ul>
-<li><strong>Dynamic Application Assessments</strong> - Whitehat attackers conduct penetration tests or automated web assessment tools are run against the live web application to identify flaws.</li>
-<li><strong>Source code reviews</strong> - Whitehat attackers use manual/automated means to analyze the source code of the web application to identify flaws.</li>
+<li><strong>Dynamic Application Assessments</strong> - Ethical attackers conduct penetration tests or automated web assessment tools are run against the live web application to identify flaws.</li>
+<li><strong>Source code reviews</strong> - Ethical attackers use manual/automated means to analyze the source code of the web application to identify flaws.</li>
 </ul>
 <p>Due to the fact that custom coded web applications are unique, these proactive identification tasks are extremely important as you are not able to rely upon third-party vulnerability notifications.</p>
 <h3 id="reactive-identification">Reactive Identification<a class="headerlink" href="#reactive-identification" title="Permanent link">&para;</a></h3>
@@ -2729,7 +2831,7 @@ reqID Parameter prone to SQL Injection.
 <p>Care should be taken to attempt to minimize either of these two rules. It may not be possible to adhere 100% to each of these goals but remember that virtual patching is about <strong>Risk Reduction</strong>. It should be understood by business owners that while you are gaining the advantage of shortening the Time-to-Fix metric, you may not be implementing a complete fix for the flaw.</p>
 <h3 id="manual-virtual-patch-creation">Manual Virtual Patch Creation<a class="headerlink" href="#manual-virtual-patch-creation" title="Permanent link">&para;</a></h3>
 <h4 id="positive-security-allow-list-virtual-patches-recommended-solution">Positive Security (Allow List) Virtual Patches (<strong>Recommended Solution</strong>)<a class="headerlink" href="#positive-security-allow-list-virtual-patches-recommended-solution" title="Permanent link">&para;</a></h4>
-<p>Positive security model (allow list) is a comprehensive security mechanism that provides an independent input validation envelope to an application. The model specifies the characteristics of valid input (character set, length, etc…) and denies anything that does not conform. By defining rules for every parameter in every page in the application the application is protected by an additional security envelop independent from its code.</p>
+<p>Positive security model (allowlist) is a comprehensive security mechanism that provides an independent input validation envelope to an application. The model specifies the characteristics of valid input (character set, length, etc…) and denies anything that does not conform. By defining rules for every parameter in every page in the application the application is protected by an additional security envelop independent from its code.</p>
 <h5 id="example-allow-list-modsecurity-virtual-patch">Example Allow List ModSecurity Virtual Patch<a class="headerlink" href="#example-allow-list-modsecurity-virtual-patch" title="Permanent link">&para;</a></h5>
 <p>In order to create an allow-list virtual patch, you must be able to verify what the normal, expected input values are. If you have implemented proper audit logging as part of the Preparation Phase, then you should be able to review audit logs to identify the format of expected input types. In this case, the <code>reqID</code> parameter is supposed to only hold integer characters so we can use this virtual patch:</p>
 <div class="highlight"><pre><span></span><code>##
@@ -2750,7 +2852,7 @@ SecRule REQUEST_URI &quot;@contains /wp-content/plugins/levelfourstorefront/scri
 <li><strong>Caution</strong>: There are numerous evasion vectors when creating virtual patches. Please consult the <a href="https://owasp.org/www-community/Virtual_Patching_Best_Practices">OWASP Best Practices: Virtual Patching document</a> for a more thorough discussion on countering evasion methods.</li>
 </ul>
 <h4 id="negative-security-block-list-virtual-patches">Negative Security (Block List) Virtual Patches<a class="headerlink" href="#negative-security-block-list-virtual-patches" title="Permanent link">&para;</a></h4>
-<p>A negative security model (block list) is based on a set of rules that detect specific known attacks rather than allow only valid traffic.</p>
+<p>A negative security model (denylist) is based on a set of rules that detect specific known attacks rather than allow only valid traffic.</p>
 <h5 id="example-block-list-modsecurity-virtual-patch">Example Block List ModSecurity Virtual Patch<a class="headerlink" href="#example-block-list-modsecurity-virtual-patch" title="Permanent link">&para;</a></h5>
 <p>Here is the example <a href="https://packetstormsecurity.com/files/119217/WordPress-Shopping-Cart-8.1.14-Shell-Upload-SQL-Injection.html">PoC code</a> that was supplied by the public advisory:</p>
 <div class="highlight"><pre><span></span><code>http://localhost/wordpress/wp-content/plugins/levelfourstorefront/scripts/administration/exportsubscribers.php?reqID=1&#39; or 1=&#39;1
@@ -2824,7 +2926,7 @@ SecRule REQUEST_URI &quot;@contains /wp-content/plugins/levelfourstorefront/scri
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      ©Copyright 2021 - CheatSheets Series Team - This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
+      ©Copyright <script>document.write(new Date().getFullYear())</script> - Cheat Sheets Series Team - This work is licensed under <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</a>.
     </div>
   
   
@@ -2844,7 +2946,7 @@ SecRule REQUEST_URI &quot;@contains /wp-content/plugins/levelfourstorefront/scri
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "navigation.expand"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
