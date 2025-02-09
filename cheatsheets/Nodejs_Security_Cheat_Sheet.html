@@ -3244,16 +3244,16 @@ redirect_from: "/cheatsheets/Nodejs_security_cheat_sheet.html"
 <span class="w">   </span><span class="p">});</span>
 </code></pre></div>
 <p>And using async/await:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">func1</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">func1</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// operations that takes a bit of time and then resolves the promise</span>
 <span class="p">}</span>
-<span class="kd">function</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">func2</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">func2</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// operations that takes a bit of time and then resolves the promise</span>
 <span class="p">}</span>
-<span class="kd">function</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">func3</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">func3</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// operations that takes a bit of time and then resolves the promise</span>
 <span class="p">}</span>
-<span class="kd">function</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">func4</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="k">async</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">func4</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// operations that takes a bit of time and then resolves the promise</span>
 <span class="p">}</span>
 
@@ -3523,7 +3523,7 @@ The <a href="https://www.npmjs.com/package/helmet">helmet</a> package can help t
 <span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">helmet</span><span class="p">());</span><span class="w"> </span><span class="c1">// Add various HTTP headers</span>
 </code></pre></div>
 <p>The top-level <code>helmet</code> function is a wrapper around 14 smaller middlewares.
-Bellow is a list of HTTP security headers covered by <code>helmet</code> middlewares:</p>
+Below is a list of HTTP security headers covered by <code>helmet</code> middlewares:</p>
 <ul>
 <li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security">Strict-Transport-Security</a></strong>: <a href="https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html">HTTP Strict Transport Security (HSTS)</a> dictates browsers that the application can only be accessed via HTTPS connections. In order to use it in your application, add the following codes:</li>
 </ul>
@@ -3580,14 +3580,6 @@ Bellow is a list of HTTP security headers covered by <code>helmet</code> middlew
 <li><strong>X-Download-Options:</strong> This header prevents Internet Explorer from executing downloaded files in the site's context. This is achieved with noopen directive. You can do so with the following piece of code:</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">helmet</span><span class="p">.</span><span class="nx">ieNoOpen</span><span class="p">());</span>
-</code></pre></div>
-<ul>
-<li><strong><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Expect-CT">Expect-CT</a>:</strong> Certificate Transparency is a new mechanism developed to fix some structural problems regarding current SSL infrastructure. Expect-CT header may enforce certificate transparency requirements. It can be implemented in your application as follows:</li>
-</ul>
-<div class="highlight"><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">expectCt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;expect-ct&#39;</span><span class="p">);</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">expectCt</span><span class="p">({</span><span class="w"> </span><span class="nx">maxAge</span><span class="o">:</span><span class="w"> </span><span class="mf">123</span><span class="w"> </span><span class="p">}));</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">expectCt</span><span class="p">({</span><span class="w"> </span><span class="nx">enforce</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">maxAge</span><span class="o">:</span><span class="w"> </span><span class="mf">123</span><span class="w"> </span><span class="p">}));</span>
-<span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">expectCt</span><span class="p">({</span><span class="w"> </span><span class="nx">enforce</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"> </span><span class="nx">maxAge</span><span class="o">:</span><span class="w"> </span><span class="mf">123</span><span class="p">,</span><span class="w"> </span><span class="nx">reportUri</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;http://example.com&#39;</span><span class="p">}));</span>
 </code></pre></div>
 <ul>
 <li><strong>X-Powered-By:</strong> X-Powered-By header is used to inform what technology is used in the server side. This is an unnecessary header causing information leakage, so it should be removed from your application. To do so, you can use the <code>hidePoweredBy</code> as follows:</li>
